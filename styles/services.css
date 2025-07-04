@@ -1,96 +1,69 @@
-/* Outer Section */
 .services-section {
-  position: relative;
-  height: 100vh;
-  background-color: #111;
+  background: #111;
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem;
-  padding-top: 2rem;
-
-}
-
-/* Title */
-.services-title {
+  padding: 4rem 2rem;
   text-align: center;
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-family: 'Outfit', sans-serif;
-  margin-bottom: 2rem;
-  color: var(--accent-color);
-  text-shadow: 0 0 10px rgba(162, 89, 255, 0.3);
-  z-index: 2;
-}
-
-/* Sticky Scroll Container (only for mobile) */
-.services-scroller {
-  position: relative;
-  height: 100vh;
-  width: 100%;
   overflow: hidden;
+  height: 100vh;
 }
 
-/* Horizontally scrollable container */
-.services-inner {
-  display: flex;
-  height: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
-}
-
-.services-inner::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
-}
-
-.service-card {
-  flex: 0 0 80%;
-  max-width: 80%;
-  height: 250px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(162, 89, 255, 0.1);
-  scroll-snap-align: center;
-  padding: 2rem;
-  font-size: 1.4rem;
+.services-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
   font-family: 'Outfit', sans-serif;
-  color: white;
-  margin: 0 1rem;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.5s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: var(--accent-color, #a259ff);
 }
 
-/* Reveal Animation */
-.service-card.visible {
-  opacity: 1;
-  transform: translateY(0);
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-/* Desktop grid fallback */
-@media (min-width: 768px) {
-  .services-scroller {
-    height: auto;
-    overflow: visible;
-  }
+/* Card Style */
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px rgba(162, 89, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 250px;
+  width: auto;
+}
 
-  .services-inner {
-    flex-wrap: wrap;
-    justify-content: center;
-    overflow: visible;
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(162, 89, 255, 0.4);
+}
+
+/* ================== Responsive: Mobile ================== */
+@media (max-width: 768px) {
+  .services-grid {
+    display: flex;
+    gap: 1.2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
   }
 
   .service-card {
-    flex: 0 1 calc(33.333% - 2rem);
-    max-width: calc(33.333% - 2rem);
-    margin-bottom: 2rem;
+    min-width: 80%;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+
+  /* Hide scrollbar on mobile */
+  .services-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .services-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
