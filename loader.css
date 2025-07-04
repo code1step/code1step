@@ -1,0 +1,127 @@
+/* === Preloader Container === */
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+/* === Loader Layout === */
+.loader-elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.loader-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* === Loader Icons (Dot + Arrows) === */
+.loader-dot,
+.loader-arrow {
+  width: 18px;
+  height: auto;
+  opacity: 0.5;
+  transform: scale(1);
+  animation: pop 1.5s ease-in-out infinite;
+}
+
+/* Staggered Animation Delays */
+.loader-dot {
+  animation-delay: 0s;
+}
+.arrow1 {
+  animation-delay: 0.3s;
+}
+.arrow2 {
+  animation-delay: 0.6s;
+}
+
+/* === Logo === */
+.logo {
+  width: 450px;
+  height: auto;
+  opacity: 0;
+  animation:
+    fade-in 1s ease-in forwards,
+    pulse 1s ease-in-out infinite;
+  animation-delay: 0.4s, 2s; /* Fade in first, then pulse starts */
+}
+
+
+/* === Animations === */
+@keyframes pop {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+
+/* === Hidden Fade-Out Trigger === */
+#preloader.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* === Responsive === */
+@media only screen and (max-width: 650px) {
+  .logo {
+    width: 300px;
+    height: auto;
+  }
+
+  .loader-dot,
+  .arrow1,
+  .arrow2 {
+    height: 1rem;
+    width: auto;
+  }
+}
+
+
+/* Initial hidden state */
+#main-content.hidden {
+  opacity: 0;
+}
+
+/* When content should fade in */
+#main-content.visible {
+  opacity: 1;
+  transition: opacity 0.8s ease;
+  transition-delay: 0.5s; /* Delays fade-in AFTER preloader fades out */
+}

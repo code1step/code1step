@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Round&display=swap');
+
+:root {
+  --gap: 2px;
+  --tile-size: 127px;
+  /* --glow-color: rgb(161, 89, 255); */
+  --glow-color:rgb(59, 55, 96);
+  --static-glow-color:rgb(255, 115, 0);
+  --tile-color: #181818;
+  --one-color: #994cff;
+  --accent-color:rgb(215, 215, 215);
+}
+
+/* ===================== Base ===================== */
+
+body {
+  margin: 0;
+  background: var(--tile-color);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  
+}
+
+/* ===================== Hero Section ===================== */
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+/* ===================== Glow Follower ===================== */
+
+.mouse-glow {
+  position: absolute;
+  width: 850px;
+  height: 850px;
+  background: radial-gradient(circle, var(--glow-color) 0%, transparent 50%);
+  border-radius: 50%;
+  filter: blur(70px);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===================== Grid Tiles ===================== */
+
+.tile-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--tile-size), 1fr));
+  grid-template-rows: repeat(auto-fill, var(--tile-size));
+  gap: var(--gap);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.tile-grid div {
+  background-color: var(--tile-color);
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+/* ===================== Hero Content ===================== */
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* centers main content vertically */
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero-text h1 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Outfit', sans-serif;
+}
+
+.title-slogan {
+  position: absolute;
+  bottom: 4rem; /* above the scroll icon */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.text-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+}
+
+.solid-text {
+  color: var(--accent-color);
+}
+
+
+ .outline-text {
+  color: var(--one-color); 
+  font-weight: 800;
+}
+
+
+.different-font {
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+
+/* Tagline */
+.tagline {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #ccc;
+  margin-top: .5rem;
+  margin-bottom: 4rem;
+  font-weight: 400;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.journey-line {
+  margin-top: 2rem;
+  font-size: clamp(1.5rem, 3.5vw, 3rem);
+  font-weight: 500;
+  color: #eee;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.word-slider {
+  display: inline-block;
+  min-width: 240px; /* Wide enough to hold 'Discovered' or 'Beautiful' */
+  text-align: center;
+  white-space: nowrap;
+}
+/* .word-slider::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #a259ff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-in-out;
+} */
+
+.word-slider.animate::after {
+  transform: scaleX(1);
+}
+
+.word-slider.fade {
+  animation: fadeUp 0.5s ease forwards;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.transformation-line {
+  font-size: clamp(2rem, 4.5vw, 5.2rem);
+  margin-top: 3rem;
+  font-weight: 600;
+  color: #e9cdff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Outfit", sans-serif;
+  height: 3rem;
+}
+
+.transformation-line .word,
+.transformation-line .arrow {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  text-align: center;
+}
+
+.transformation-line .show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.arrow {
+  color: white;
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+
+
+.hero-subtext {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #c3c2c4;
+  margin-top: 2rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+
+
+.scroll-indicator:hover {
+  opacity: 1;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 10px);
+  }
+}
+
+
+
+
+
+
+
+.get-started-btn {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.8rem;
+  background-color: #a674ec;
+  color: #202020;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: 'Outfit', sans-serif;
+  box-shadow: 0 4px 20px rgba(162, 89, 255, 0.4);
+}
+
+.get-started-btn:hover {
+  background-color: #8f40ff;
+  color: #e9cdff;
+  transform: translateX(-50%) scale(1);
+}
+
+.arrow-icon {
+  font-size: 1.2rem;
+  animation: arrow-bounce 1.6s infinite ease-in-out;
+  display: inline-block;
+}
+
+@keyframes arrow-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+
+#mouse-glow-1 {
+  position: absolute;
+  width: 850px;
+  height: 850px;
+  background: radial-gradient(circle, var(--static-glow-color) 0%, transparent 50%);
+  border-radius: 50%;
+  filter: blur(70px);
+  left: 0;
+  bottom: 0;
+  transform: translate(-50%, 50%); /* Adjusts to stay anchored bottom-left */
+  pointer-events: none;
+  z-index: 0;
+  animation: glow-breathe 3s ease-in-out infinite;
+}
+
+
+#mouse-glow-2 {
+  position: absolute;
+  width: 850px;
+  height: 850px;
+  background: radial-gradient(circle, var(--static-glow-color) 0%, transparent 50%);
+  border-radius: 50%;
+  filter: blur(70px);
+  right: 0;
+  bottom: 0;
+  transform: translate(50%, 50%);
+  pointer-events: none;
+  z-index: 0;
+  animation: glow-breathe-2 3s ease-in-out infinite;
+}
+
+#mouse-glow {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#mouse-glow.active {
+  opacity: 1;
+}
+
+
+@keyframes glow-breathe {
+  0%, 100% {
+    transform: scale(1) translate(-50%, 50%);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.08) translate(-50%, 50%);
+    opacity: 1;
+  }
+}
+@keyframes glow-breathe-2 {
+  0%, 100% {
+    transform: scale(1) translate(50%, 50%);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.08) translate(50%, 50%);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+#mouse-glow-1 {
+  position: absolute;
+  width: 850px;
+  height: 850px;
+  background: radial-gradient(circle, var(--static-glow-color) 0%, transparent 50%);
+  border-radius: 50%;
+  filter: blur(70px);
+  left: 0;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  pointer-events: none;
+  z-index: 0;
+  animation: glow-move-left 12s ease-in-out infinite;
+}
+
+#mouse-glow-2 {
+  position: absolute;
+  width: 850px;
+  height: 850px;
+  background: radial-gradient(circle, var(--static-glow-color) 0%, transparent 50%);
+  border-radius: 50%;
+  filter: blur(70px);
+  right: 0;
+  bottom: 0;
+  transform: translate(50%, 50%);
+  pointer-events: none;
+  z-index: 0;
+  animation: glow-move-right 12s ease-in-out infinite;
+}
+
+@keyframes glow-move-left {
+  0%, 100% {
+    transform: translate(-50%, 50%);
+  }
+  50% {
+    transform: translate(20%, 60%);
+  }
+}
+
+@keyframes glow-move-right {
+  0%, 100% {
+    transform: translate(50%, 50%);
+  }
+  50% {
+    transform: translate(-20%, 60%);
+  }
+}
