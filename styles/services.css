@@ -120,6 +120,7 @@ justify-content: flex-end;
   width: 150px;
   height: 150px;
   margin-bottom: 1.2rem;
+  /* margin-top: 1rem; */
 }
 
 
@@ -235,6 +236,13 @@ justify-content: flex-end;
   .outer .card{
    padding: .8rem;
   }
+  .lottie-icon {
+  width: 150px;
+  height: 150px;
+  transform: translateY(2rem);
+  margin-bottom: 1.2rem;
+ 
+}
 
 }
 @media only screen and (max-width:350px){
