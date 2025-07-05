@@ -239,12 +239,16 @@ justify-content: flex-end;
   .lottie-icon {
   width: 150px;
   height: 150px;
-  transform: translateY(2rem);
+  transform: translateY(3rem);
   margin-bottom: 1.2rem;
  
 }
+.card .title{
+  font-size: 2rem;
+}
 
 }
+
 @media only screen and (max-width:350px){
   .outer{
     width:250px;
