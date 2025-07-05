@@ -19,6 +19,7 @@ body {
   background: var(--tile-color);
   color: white;
   font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
   
 }
 
