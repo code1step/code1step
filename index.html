@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="loader.css">
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="styles/services.css">
+  <link rel="stylesheet" href="styles/choose-us.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
@@ -250,7 +251,7 @@
 
 <div class="outer">
   <div class="card">
-    <div class="lottie-icon" data-json="assets/loading-services.json"></div>
+    <div class="lottie-icon" data-json="assets/services/loading.json"></div>
 
     <div class="text">
       <div class="title">More Coming Soon</div>
@@ -267,17 +268,102 @@
 
 
 
-
-
-
-
       </div>
     </div>
   </div>
 </section>
-<section class="next-section">
-  <h2>Next Section</h2>
+
+
+
+
+
+<section class="why-choose-us-section">
+  <div class="why-intro">
+    <h2>Why Choose Us</h2>
+    <p class="why-tagline">
+      Everyone claims high-quality tech — and we deliver that too. But what sets us apart is how we treat every project like our own, down to the tiniest detail.
+    </p>
+  </div>
+
+  <!-- Desktop Layout -->
+<div class="circle-container-desktop">
+  <!-- Center circle with branding -->
+  <div class="circle-center reveal-new" data-delay="1.8s" data-speed="1s">
+    <lord-icon
+      src="https://cdn.lordicon.com/gqzfzudq.json"
+      trigger="loop"
+      colors="primary:#ffffff,secondary:#ad49ff"
+      style="width: 60px; height: 60px">
+    </lord-icon>
+    <span>Code1Step</span>
+  </div>
+
+  <!-- Animated surrounding values -->
+  <div class="circle-item reveal-new" data-delay="0.3s" data-speed="1s">
+    <i class="fas fa-magic"></i>
+    <p>Pixel-perfect on every detail.</p>
+  </div>
+
+  <div class="circle-item reveal-new" data-delay="0.6s" data-speed="1s">
+    <i class="fas fa-fingerprint"></i>
+    <p>Unmatched uniqueness every time.</p>
+  </div>
+
+  <div class="circle-item reveal-new" data-delay="0.9s" data-speed="1s">
+    <i class="fas fa-balance-scale"></i>
+    <p>We value every budget equally.</p>
+  </div>
+
+  <div class="circle-item reveal-new" data-delay="1.2s" data-speed="1s">
+    <i class="fas fa-heart"></i>
+    <p>Your project is our project.</p>
+  </div>
+
+  <div class="circle-item reveal-new" data-delay="1.5s" data-speed="1s">
+    <i class="fas fa-check-circle"></i>
+    <p>We work until satisfaction is met.</p>
+  </div>
+</div>
+
+
+  <!-- Mobile Layout -->
+<div class="circle-container-mobile">
+  <div class="node-item left reveal-new" data-delay="0s" data-speed="0.8s">
+    <i class="fas fa-magic"></i>
+    <p>Pixel-perfect on every detail.</p>
+  </div>
+
+  <div class="connector reveal-new" data-delay="0.1s" data-speed="0.6s"></div>
+
+  <div class="node-item right reveal-new" data-delay="0.2s" data-speed="0.8s">
+    <i class="fas fa-fingerprint"></i>
+    <p>Unmatched uniqueness every time.</p>
+  </div>
+
+  <div class="connector reveal-new" data-delay="0.3s" data-speed="0.6s"></div>
+
+  <div class="node-item left reveal-new" data-delay="0.4s" data-speed="0.8s">
+    <i class="fas fa-balance-scale"></i>
+    <p>We value every budget equally.</p>
+  </div>
+
+  <div class="connector reveal-new" data-delay="0.5s" data-speed="0.6s"></div>
+
+  <div class="node-item right reveal-new" data-delay="0.6s" data-speed="0.8s">
+    <i class="fas fa-heart"></i>
+    <p>Your project is our project.</p>
+  </div>
+
+  <div class="connector reveal-new" data-delay="0.7s" data-speed="0.6s"></div>
+
+  <div class="node-item left reveal-new" data-delay="0.8s" data-speed="0.8s">
+    <i class="fas fa-check-circle"></i>
+    <p>We work until satisfaction is met.</p>
+  </div>
+</div>
+
 </section>
+
 
 
 
@@ -297,6 +383,7 @@
   <script src="loader.js" defer></script>
   <script src="nav.js" defer></script>
   <script src="scripts/services.js" defer></script>
+  <script src="scripts/choose-us.js" defer></script>
 
 </body>
 </html>

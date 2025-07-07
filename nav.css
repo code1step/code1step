@@ -4,7 +4,7 @@
   --nav-scroll-bg: rgba(13, 13, 13, 0.95);
   --blur: blur(14px);
   --border: rgba(255, 255, 255, 0.1);
-  --text: #fff;
+  --text: #000000;
   --accent: #a259ff;
     --nav-text:rgb(178, 111, 255);
 }
@@ -16,7 +16,7 @@
   top: 0;
   z-index: 999;
   background-color: transparent;
-  background-color: rgb(51, 36, 56);
+  background-color: rgb(239, 239, 239);
   transition: background-color 0.4s ease;
 }
 

@@ -107,3 +107,9 @@ updateTransformationWords(); // initial call
 document.querySelector('.scroll-indicator').addEventListener('click', () => {
   document.querySelector('#services-section').scrollIntoView({ behavior: 'smooth' });
 });
+
+
+
+
+
+
