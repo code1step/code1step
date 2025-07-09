@@ -33,10 +33,8 @@ window.addEventListener("resize", () => {
   }
 });
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
-  const revealElements = document.querySelectorAll(".reveal-new");
+  const revealElements = document.querySelectorAll(".reveal-new, .reveal-center");
 
   const revealOnScroll = () => {
     const triggerBottom = window.innerHeight - 100;
@@ -51,7 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
         el.style.transitionDelay = delay;
         el.style.transitionDuration = speed;
 
-        el.classList.add("active-new");
+        // Determine the correct active class
+        if (el.classList.contains("reveal-center")) {
+          el.classList.add("active-new"); // You can rename this to active-center if needed
+        } else {
+          el.classList.add("active-new");
+        }
       }
     });
   };

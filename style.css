@@ -10,6 +10,15 @@
   --tile-color: #181818;
   --one-color: #994cff;
   --accent-color:rgb(215, 215, 215);
+  --section-title:linear-gradient(45deg, #ad49ff, #ffffff);
+}
+
+.section-title{
+    font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, #ad49ff, #ffffff);
+  background-clip: text;
+  color: transparent;
 }
 
 /* ===================== Base ===================== */
@@ -429,3 +438,4 @@ body {
     transform: translate(-20%, 60%);
   }
 }
+
