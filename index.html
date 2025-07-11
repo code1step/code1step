@@ -10,6 +10,11 @@
   <link rel="stylesheet" href="styles/services.css">
   <link rel="stylesheet" href="styles/choose-us.css">
   <link rel="stylesheet" href="styles/portfolio.css">
+  <link rel="stylesheet" href="styles/our-process.css">
+  <link rel="stylesheet" href="styles/contact-us.css">
+  <link rel="stylesheet" href="styles/about-us.css">
+  <link rel="stylesheet" href="styles/final-changes.css">
+  <link rel="stylesheet" href="styles/footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
@@ -36,19 +41,20 @@
 
     <!-- Center: Menu Items -->
     <ul class="nav-menu" id="nav-menu">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#services">SERVICES</a></li>
+      <li><a href="#our-work">PORTFOLIO</a></li>
+      <li><a href="#contact">CONTACT</a></li>
     </ul>
 
     <!-- Right: Socials / CTA -->
     <div class="nav-right">
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-github"></i></a>
-      <button class="nav-toggle" id="nav-toggle"><i class="fas fa-bars"></i></button>
-    </div>
+
+<button class="nav-contact-btn">
+  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> CONTACT US
+</button>
+  <button class="nav-toggle" id="nav-toggle"><i class="fas fa-bars"></i></button>
+</div> 
   </nav>
 </header>
 
@@ -63,7 +69,7 @@
     <!-- Custom Cursor -->
     <div class="cursor" id="cursor"></div>
 
-<section class="hero-section">
+<section class="hero-section" id="home">
   <div class="mouse-glow" id="mouse-glow"></div>
   <div class="mouse-glow" id="mouse-glow-1"></div>
    <div class="mouse-glow" id="mouse-glow-2"></div>
@@ -110,10 +116,10 @@
 
 
 
-<section class="services-section" id="services-section">
+<section class="services-section" id="services">
   <div class="scroll-container">
     <div class="sticky-wrapper">
-      <h2 class="services-title section-title">What We Offer</h2>
+      <h2 class=" section-title">What We Offer</h2>
       <div class="services-track">
 
 
@@ -277,11 +283,144 @@
 
 
 
+<!-- Our Process Section -->
+<section class="process-section" id="our-process">
+  <h2 class=" section-title">How We Work</h2>
+  <p class=" section-subtitle">A journey from idea to impact — we walk with you every step.</p>
+
+  <!-- Desktop Layout -->
+  <div class="process-desktop">
+    <div class="process-line-horizontal"></div>
+      <div class="process-step-box-wrapper">
+
+
+
+        <div class="process-step-box-wrapper-2">
+                  <div class="process-step-box">
+      <div class="vertical-connector"></div>
+      <div class="step-card">
+        <i class="fas fa-lightbulb"></i>
+        <h4>Understand</h4>
+        <p>We listen and capture your vision.</p>
+      </div>
+    </div>
+
+    <div class="process-step-box">
+      <div class="vertical-connector"></div>
+      <div class="step-card">
+        <i class="fas fa-pencil-ruler"></i>
+        <h4>Plan</h4>
+        <p>Wireframes, scope, and timelines.</p>
+      </div>
+    </div>
+        </div>
+
+
+
+        <div class="process-step-box-wrapper-2">
+              <div class="process-step-box">
+      <div class="vertical-connector"></div>
+      <div class="step-card">
+        <i class="fas fa-code"></i>
+        <h4>Build</h4>
+        <p>Clean code, crafted to perfection.</p>
+      </div>
+    </div>
+
+    <div class="process-step-box">
+      <div class="vertical-connector"></div>
+      <div class="step-card">
+        <i class="fas fa-search"></i>
+        <h4>Refine</h4>
+        <p>Review, test, and polish.</p>
+      </div>
+    </div>
+        </div>
+
+        <div class="process-step-box-wrapper-2">
+              <div class="process-step-box">
+      <div class="vertical-connector"></div>
+      <div class="step-card">
+        <i class="fas fa-rocket"></i>
+        <h4>Launch</h4>
+        <p>Go live with performance and impact.</p>
+      </div>
+    </div>
+
+    <div class="process-step-box">
+      <div class="vertical-connector"></div>
+      <div class="step-card">
+        <i class="fas fa-handshake"></i>
+        <h4>Support</h4>
+        <p>Post-launch help and iteration.</p>
+      </div>
+    </div>
+  </div>
+        </div>
+
+
+
+
+
+      </div>
+    
+
+  <!-- Mobile Layout -->
+  <div class="process-mobile">
+    <div class="mobile-step left reveal-new fade-left" data-delay="0s" data-speed="0.8s">
+      <i class="fas fa-lightbulb"></i>
+      <p>We listen and capture your vision.</p>
+    </div>
+
+    <div class="connector reveal-new " data-delay="0.1s" data-speed="0.6s"></div>
+
+    <div class="mobile-step right reveal-new fade-right" data-delay="0.2s" data-speed="0.8s">
+      <i class="fas fa-pencil-ruler"></i>
+      <p>Wireframes, scope, and timelines.</p>
+    </div>
+
+    <div class="connector reveal-new " data-delay="0.3s" data-speed="0.6s"></div>
+
+    <div class="mobile-step left reveal-new fade-left" data-delay="0.4s" data-speed="0.8s">
+      <i class="fas fa-code"></i>
+      <p>Clean code, crafted to perfection.</p>
+    </div>
+
+    <div class="connector reveal-new " data-delay="0.5s" data-speed="0.6s"></div>
+
+    <div class="mobile-step right reveal-new fade-right" data-delay="0.6s" data-speed="0.8s">
+      <i class="fas fa-search"></i>
+      <p>Review, test, and polish.</p>
+    </div>
+
+    <div class="connector reveal-new " data-delay="0.7s" data-speed="0.6s"></div>
+
+    <div class="mobile-step left reveal-new fade-left" data-delay="0.8s" data-speed="0.8s">
+      <i class="fas fa-rocket"></i>
+      <p>Go live with performance and impact.</p>
+    </div>
+
+    <div class="connector reveal-new " data-delay="0.9s" data-speed="0.6s"></div>
+
+    <div class="mobile-step right reveal-new fade-right" data-delay="1.0s" data-speed="0.8s">
+      <i class="fas fa-handshake"></i>
+      <p>Post-launch help and iteration.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
 
 <section class="why-choose-us-section ">
   <div class="why-intro">
-    <h2 class="section-title">Why Choose Us</h2>
-    <p class="why-tagline">
+    <h2 class="section-title " data-delay=".5s" data-speed=".6s">Why Choose Us</h2>
+    <p class="section-subtitle " data-delay=".8s" data-speed=".6s">
       Everyone claims high-quality tech — and we deliver that too. But what sets us apart is how we treat every project like our own, down to the tiniest detail.
     </p>
   </div>
@@ -369,6 +508,7 @@
 
 
 
+
 <section class="our-work-section" id="our-work">
   <h2 class="section-title">Our Work Speaks</h2>
   <p class="section-subtitle">We build websites that don’t just look good — they perform brilliantly.</p>
@@ -414,6 +554,276 @@
 
 
 
+
+<!-- === ABOUT CODE1STEP SECTION === -->
+<section class="about-section " id="about">
+  <h2 class="section-title">About Code1Step</h2>
+  <p class="section-subtitle">
+    We don’t just build websites — we craft digital experiences. At Code1Step, every project is personal. Whether it’s $50 or $5000, we bring the same energy, precision, and creativity to help your brand grow.
+  </p>
+
+  <div class="about-values">
+
+
+<!-- Interactive Value Card -->
+
+<div class="container noselect reveal-new fade-right" data-delay="1s" data-speed=".6s">
+  <div class="canvas">
+    <div class="tracker tr-1"></div>
+    <div class="tracker tr-2"></div>
+    <div class="tracker tr-3"></div>
+    <div class="tracker tr-4"></div>
+    <div class="tracker tr-5"></div>
+    <div class="tracker tr-6"></div>
+    <div class="tracker tr-7"></div>
+    <div class="tracker tr-8"></div>
+    <div class="tracker tr-9"></div>
+
+    <div id="card" class="card-active">
+      <div class="card-content">
+        <div class="card-glare"></div>
+
+        <div class="cyber-lines">
+          <span></span><span></span><span></span><span></span>
+        </div>
+
+        <p id="prompt">STARTS WITH YOU</p>
+
+        <div class="value-card-title">WE LISTEN<br />FIRST</div>
+
+        <div class="glowing-elements">
+          <div class="glow-1"></div>
+          <div class="glow-2"></div>
+          <div class="glow-3"></div>
+        </div>
+
+        <div class="subtitle">
+          <span>YOUR VISION</span>
+          <span class="highlight">OUR DIRECTION</span>
+        </div>
+
+        <div class="card-particles">
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+        </div>
+
+        <div class="corner-elements">
+          <span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="scan-line"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container noselect reveal-new fade-in" data-delay="1s" data-speed=".6s">
+  <div class="canvas">
+    <div class="tracker tr-1"></div>
+    <div class="tracker tr-2"></div>
+    <div class="tracker tr-3"></div>
+    <div class="tracker tr-4"></div>
+    <div class="tracker tr-5"></div>
+    <div class="tracker tr-6"></div>
+    <div class="tracker tr-7"></div>
+    <div class="tracker tr-8"></div>
+    <div class="tracker tr-9"></div>
+
+    <div id="card" class="card-active">
+      <div class="card-content">
+        <div class="card-glare"></div>
+
+        <div class="cyber-lines">
+          <span></span><span></span><span></span><span></span>
+        </div>
+
+        <p id="prompt">NOT JUST CODE</p>
+
+        <div class="value-card-title">WE CREATE<br />DIFFERENTLY</div>
+
+        <div class="glowing-elements">
+          <div class="glow-1"></div>
+          <div class="glow-2"></div>
+          <div class="glow-3"></div>
+        </div>
+
+        <div class="subtitle">
+          <span>MODERN TECH</span>
+          <span class="highlight">WITH A TWIST</span>
+        </div>
+
+        <div class="card-particles">
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+        </div>
+
+        <div class="corner-elements">
+          <span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="scan-line"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container noselect reveal-new fade-left" data-delay="1s" data-speed=".6s">
+  <div class="canvas">
+    <div class="tracker tr-1"></div>
+    <div class="tracker tr-2"></div>
+    <div class="tracker tr-3"></div>
+    <div class="tracker tr-4"></div>
+    <div class="tracker tr-5"></div>
+    <div class="tracker tr-6"></div>
+    <div class="tracker tr-7"></div>
+    <div class="tracker tr-8"></div>
+    <div class="tracker tr-9"></div>
+
+    <div id="card" class="card-active">
+      <div class="card-content">
+        <div class="card-glare"></div>
+
+        <div class="cyber-lines">
+          <span></span><span></span><span></span><span></span>
+        </div>
+
+        <p id="prompt">OUR VALUE</p>
+
+        <div class="value-card-title">WE DELIVER<br />TRUST</div>
+
+        <div class="glowing-elements">
+          <div class="glow-1"></div>
+          <div class="glow-2"></div>
+          <div class="glow-3"></div>
+        </div>
+
+        <div class="subtitle">
+          <span>COMMITMENT FIRST</span>
+          <span class="highlight">RESULTS FOLLOW</span>
+        </div>
+
+        <div class="card-particles">
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+        </div>
+
+        <div class="corner-elements">
+          <span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="scan-line"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+  </div>
+</section>
+
+
+
+
+
+<!-- === CONTACT US SECTION === -->
+<section class="contact-section" id="contact">
+  <h2 class="contact-title section-title">Get in Touch</h2>
+  <p class="contact-subtitle section-subtitle">We'd love to hear about your project or just say hello.</p>
+
+  <div class="contact-wrapper">
+    <!-- Contact Form -->
+    <div class="contact-panel contact-left">
+      <h3 class="panel-title">Book a meeting with us</h3>
+      <form class="contact-form" action="https://formspree.io/f/meokbndg" method="POST" id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Phone (Optional)" />
+        <textarea name="message" rows="5" placeholder="Your Message: Need a new modern website. " required minlength="10"></textarea>
+        <button type="submit">Send Message</button>
+        <div class="form-message" id="formMessage"></div>
+      </form>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="contact-panel contact-right">
+      <h3 class="panel-title">Our Contact Info</h3>
+
+      <div class="info-block">
+        <label>Email</label>
+        <p><i class="fas fa-envelope"></i> <span class="placeholder-text">code1step@gmail.com</span></p>
+      </div>
+
+      <div class="info-block">
+        <label>Phone</label>
+        <p><i class="fas fa-phone"></i> <span class="placeholder-text">+91-8384485001</span></p>
+      </div>
+
+      <div class="info-block">
+        <label>Follow Us</label>
+        <div class="social-icons">
+          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <a href="https://wa.me/918015451774" class="contact-whatsapp-btn">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer class="code1step-footer">
+  <div class="footer-container">
+    <!-- Logo & About -->
+    <div class="footer-section about">
+      <img src="assets/logo-png.png" alt="Code1Step Logo" class="footer-logo" />
+      <p>We build websites that work — fast, visible, and built for results. Let's build yours next.</p>
+      <a href="mailto:hello@code1step.com" class="footer-email">hello@code1step.com</a>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#our-work">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-section social">
+      <h4>Connect</h4>
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Code1Step. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
   </div>
 
   <!-- External libraries -->
@@ -430,6 +840,11 @@
   <script src="scripts/services.js" defer></script>
   <script src="scripts/choose-us.js" defer></script>
   <script src="scripts/portfolio.js" defer></script>
+  <script src="scripts/our-process.js" defer></script>
+  <script src="scripts/contact-us.js" defer></script>
+    <script src="scripts/about-us.js" defer></script>
+    <script src="scripts/final-changes.js" defer></script>
+  
 
 </body>
 </html>

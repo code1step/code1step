@@ -1,0 +1,40 @@
+.section-title,
+.section-subtitle {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Initial hidden state */
+.section-title.animate-init,
+.section-subtitle.animate-init {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Triggered when in view */
+.section-title.animate-show,
+.section-subtitle.animate-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Your custom styles */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(45deg, #ad49ff, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #aaa;
+  margin-bottom: 5rem;
+  text-align: center;
+  max-width: 800px;
+  margin-inline:auto;
+}

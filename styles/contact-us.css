@@ -1,0 +1,223 @@
+.contact-section {
+  padding: 5rem 2rem;
+  background: #0e0d1b;
+  color: white;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, #ad49ff, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.contact-subtitle {
+  margin-bottom: 2rem;
+  color: #aaa;
+  font-size: 1.1rem;
+}
+
+.contact-wrapper {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg,rgba(108, 100, 255, 0.297),rgb(11, 8, 12));
+ 
+  border-radius: 25px;
+  padding: 1rem;
+}
+
+.contact-panel {
+  background: rgba(255,255,255,0.04);
+  padding: 2rem;
+  border-radius: 1rem;
+  flex: 1;
+  min-width: 300px;
+  max-width: 100%;
+
+  text-align: left;
+}
+
+.panel-title {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: rgba(255,255,255,0.07);
+  color: white;
+  outline: none;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(45deg, #ad49ff, #332563);
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+
+.form-message {
+  margin-top: 1rem;
+  font-weight: bold;
+  display: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.form-message.success {
+  background: rgba(50, 205, 50, 0.1);
+  color: #28e17f;
+  border: 1px solid #28e17f;
+  display: block;
+}
+
+.form-message.error {
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff7272;
+  border: 1px solid #ff7272;
+  display: block;
+}
+
+.contact-panel p {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-block {
+  margin-bottom: 1.5rem;
+}
+
+.info-block label {
+  font-size: 0.95rem;
+  font-weight: bold;
+  display: block;
+  color: #bbb;
+  margin-bottom: 0.3rem;
+}
+
+.social-icons {
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 0.5rem;
+  font-size: 1.4rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ad49ff;
+}
+
+.placeholder-text {
+  color: #ccc;
+}
+
+.contact-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(to right, #0de9c1, #126e8c);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 1s ease-in-out;
+  margin-top: 2rem;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+}
+
+.contact-left,
+.contact-right {
+  flex: 1;
+  min-width: 300px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.04);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+
+
+/* Ensure both panels take same height */
+.contact-wrapper {
+  align-items: stretch;
+}
+
+/* Shared base for both buttons */
+.contact-form button,
+.contact-whatsapp-btn {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+/* Gradient hover layer */
+.contact-form button::before,
+.contact-whatsapp-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(45deg, #7c5cef, #ad49ff);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.4s ease;
+}
+
+/* WhatsApp specific gradient hover layer */
+.contact-whatsapp-btn::before {
+  background: linear-gradient(to right, #126e8c, #0de9c1);
+}
+
+/* Hover behavior */
+.contact-form button:hover::before,
+.contact-whatsapp-btn:hover::before {
+  opacity: 1;
+}
+
+/* Maintain original background visible under default state */
+.contact-form button {
+  background: linear-gradient(45deg, #ad49ff, #603fd8);
+}
+
+.contact-whatsapp-btn {
+  background: linear-gradient(to right, #0de9c1, #126e8c);
+}

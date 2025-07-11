@@ -4,26 +4,31 @@
   --nav-scroll-bg: rgba(13, 13, 13, 0.95);
   --blur: blur(14px);
   --border: rgba(255, 255, 255, 0.1);
-  --text: #000000;
+  --text: rgb(235, 246, 255);
   --accent: #a259ff;
     --nav-text:rgb(178, 111, 255);
+}
+html {
+  scroll-behavior: smooth;
 }
 
 /* Header Base */
 .main-header {
   position: fixed;
-  width: 100%;
+  width: 100dvw;
   top: 0;
   z-index: 999;
   background-color: transparent;
-  background-color: rgb(239, 239, 239);
+ 
+  background-color: transparent;
   transition: background-color 0.4s ease;
+  
+}
+.main-header.scrolled{
+   background-color: rgb(237, 246, 254);
 }
 
-.main-header.scrolled {
-  background-color: var(--nav-scroll-bg);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
+
 
 /* Navigation Layout */
 .main-nav {
@@ -31,6 +36,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  /* padding-right: 2rem; */
   max-width: 1200px;
   margin: auto;
   color: var(--text);
@@ -54,11 +60,14 @@
   backdrop-filter: var(--blur);
   border-radius: 20px;
   padding: 0.6rem 1.2rem;
-  border: 1px solid var(--border);
   margin:0;
-  transform: translateX(-20px);
+  /* transform: translateX(-20px); */
 }
 
+
+.nav-menu.scrolled li a{
+   color: #516d91;
+}
 .nav-menu li a {
   color: var(--text);
   font-weight: 450;
@@ -102,19 +111,65 @@
   cursor: pointer;
 }
 
+.nav-toggle.scrolled{
+  color: black;
+}
 .nav-toggle i {
   transition: transform 0.3s ease;
 }
 
+
+/* From Uiverse.io by barisdogansutcu */ 
+.nav-contact-btn{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 10px;
+ font-family: inherit;
+ font-size: 13px;
+ font-weight: 500;
+ text-transform: uppercase;
+ letter-spacing: 0.4px;
+
+ background-color: transparent;
+ color: rgb(237, 246, 254);
+border:3px solid rgba(158, 87, 212, 0.877);
+border-radius: 35px;;
+ padding: 16px 24px 16px 28px;
+ transform: translate(0px, 0px) rotate(0deg);
+ transition: 0.2s;
+transition: background-color 0.4s ease;
+}
+
+.nav-contact-btn.scrolled{
+ color: #516d91;
+ background-color: rgb(237, 246, 254);
+ box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
+}
+
+.nav-contact-btn.scrolled:hover{
+  background-color: #516d91;
+  color: aliceblue ;
+  transform: none;
+}
+
+.nav-contact-btn:hover {
+ 
+ transform: scale(.95);
+ box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+}
+
+.nav-contact-btn:active {
+ box-shadow: none;
+}
 /* ======================
    Mobile Styles
 ====================== */
 @media (max-width: 768px) {
   .nav-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+
+  z-index: 999;
+  border-radius: 0;
     flex-direction: column;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.9);
@@ -123,6 +178,16 @@
     padding: 0;
     border-radius: 0 0 12px 12px;
     transition: max-height 0.4s ease-in-out, padding 0.3s ease;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100vw;
+  max-width: unset;
+   
+  }
+
+  .nav-contact-btn{
+    display: none;
   }
 
   .nav-menu.show {
@@ -137,8 +202,30 @@
   .nav-toggle {
     display: block;
   }
+ .main-header.scrolled .nav-toggle {
+  color: #35475e;
+}
+
 
   .nav-right a {
     display: none;
   }
+
+  .nav-right a.nav-contact-btn {
+    display: none;
+  }
+
+  .nav-menu.scrolled li a{
+   color: #e3efff;
 }
+
+  .nav-menu.scrolled li a:hover{
+   color: #e7b3ff;
+   text-shadow: 5px 5px 10px rgba(193, 60, 255, 0.822);
+
+}
+
+}
+
+
+
