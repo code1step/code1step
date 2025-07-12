@@ -1,8 +1,9 @@
 .about-section {
   padding: 5rem 2rem;
-  background: linear-gradient(to bottom,rgb(111, 0, 179),#0e0d1b);
+  background: linear-gradient(to bottom,rgba(157, 0, 255, 0.492),#0e0d1b);
   color: white;
   text-align: center;
+  
 }
 
 .about-title {

@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const navMenu = document.querySelector(".nav-menu");
   const contactBtn = document.querySelector(".nav-contact-btn");
 
-
   // Toggle hamburger menu
   if (toggleBtn && menu && toggleIcon) {
     toggleBtn.addEventListener("click", () => {
@@ -31,4 +30,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", handleScroll);
   handleScroll(); // run once on load in case page is already scrolled
+
+  // Smooth scroll to #contact when CONTACT US button is clicked
+  if (contactBtn) {
+    contactBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      const contactSection = document.querySelector("#contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  }
 });

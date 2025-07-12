@@ -5,7 +5,7 @@
   --gap: 2px;
   --tile-size: 127px;
   /* --glow-color: rgb(161, 89, 255); */
-  --glow-color:rgb(59, 55, 96);
+  --glow-color:rgba(133, 53, 231, 0.497);
   --static-glow-color:rgb(255, 115, 0);
   --tile-color: #181818;
   --one-color: #994cff;
@@ -322,36 +322,10 @@ body {
 }
 
 
-#mouse-glow-1 {
-  position: absolute;
-  width: 850px;
-  height: 850px;
-  background: radial-gradient(circle, var(--static-glow-color) 0%, transparent 50%);
-  border-radius: 50%;
-  filter: blur(70px);
-  left: 0;
-  bottom: 0;
-  transform: translate(-50%, 50%); /* Adjusts to stay anchored bottom-left */
-  pointer-events: none;
-  z-index: 0;
-  animation: glow-breathe 3s ease-in-out infinite;
-}
 
 
-#mouse-glow-2 {
-  position: absolute;
-  width: 850px;
-  height: 850px;
-  background: radial-gradient(circle, var(--static-glow-color) 0%, transparent 50%);
-  border-radius: 50%;
-  filter: blur(70px);
-  right: 0;
-  bottom: 0;
-  transform: translate(50%, 50%);
-  pointer-events: none;
-  z-index: 0;
-  animation: glow-breathe-2 3s ease-in-out infinite;
-}
+
+
 
 #mouse-glow {
   opacity: 0;
@@ -403,7 +377,7 @@ body {
   transform: translate(-50%, 50%);
   pointer-events: none;
   z-index: 0;
-  animation: glow-move-left 12s ease-in-out infinite;
+  animation: glow-move-left 6s ease-in-out infinite;
 }
 
 #mouse-glow-2 {
@@ -418,7 +392,7 @@ body {
   transform: translate(50%, 50%);
   pointer-events: none;
   z-index: 0;
-  animation: glow-move-right 12s ease-in-out infinite;
+  animation: glow-move-right 6s ease-in-out infinite;
 }
 
 @keyframes glow-move-left {

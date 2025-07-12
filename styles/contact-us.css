@@ -158,6 +158,9 @@
   .contact-wrapper {
     flex-direction: column;
   }
+  .contact-section {
+    padding: 2rem 1rem;
+  }
 }
 
 .contact-left,
