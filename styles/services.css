@@ -10,7 +10,7 @@
 }
 
 .scroll-container {
-  height: 100vh;
+  height: 100svh;
   overflow: hidden;
   position: sticky;
   top: 0;

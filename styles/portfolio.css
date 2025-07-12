@@ -3,7 +3,7 @@
   background: #212135;
   color: #fff;
   text-align: center;
-  min-height: 100vh;
+  height: 100svh;
 }
 
 .section-title {
@@ -64,6 +64,13 @@
 }
 
 }
+
+@media (max-width: 768px) {
+  section {
+    min-height: auto;
+  }
+}
+
 
 
 .project-card img {
